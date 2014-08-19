@@ -1,6 +1,6 @@
-class CreateDimTypes < ActiveRecord::Migration
+class CreateCharacteristics < ActiveRecord::Migration
   def change
-    create_table :dim_types do |t|
+    create_table :characteristics do |t|
       t.string :name
       t.string :symbol
       t.boolean :two_sided

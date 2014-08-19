@@ -2,12 +2,12 @@
   = f.error_notification
 
   .form-inputs
+    = f.association :part
     = f.input :bubble
+    = f.association :characteristic
     = f.input :dim
     = f.input :tolerance_less
     = f.input :tolerance_plus
-    = f.input :dim_type
-    = f.input :part_id
 
   .form-actions
     = f.button :submit

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "dim_types/show", :type => :view do
+RSpec.describe "characteristics/show", :type => :view do
   before(:each) do
-    @dim_type = assign(:dim_type, DimType.create!(
+    @characteristic = assign(:characteristic, Characteristic.create!(
       :name => "Name",
       :symbol => "Symbol",
       :two_sided => false,

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :requirements
+  resources :characteristics
 
-  resources :dim_types
+  resources :requirements
 
   resources :parts
 

@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe "dim_types/index", :type => :view do
+RSpec.describe "characteristics/index", :type => :view do
   before(:each) do
-    assign(:dim_types, [
-      DimType.create!(
+    assign(:characteristics, [
+      Characteristic.create!(
         :name => "Name",
         :symbol => "Symbol",
         :two_sided => false,
         :continuous => false
       ),
-      DimType.create!(
+      Characteristic.create!(
         :name => "Name",
         :symbol => "Symbol",
         :two_sided => false,
@@ -18,7 +18,7 @@ RSpec.describe "dim_types/index", :type => :view do
     ])
   end
 
-  it "renders a list of dim_types" do
+  it "renders a list of characteristics" do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Symbol".to_s, :count => 2

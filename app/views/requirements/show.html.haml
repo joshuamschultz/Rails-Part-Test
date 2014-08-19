@@ -14,11 +14,15 @@
   = @requirement.tolerance_plus
 %p
   %b Dim type:
-  = @requirement.dim_type
+  = @requirement.characteristic.name
 %p
   %b Part:
-  = @requirement.part_id
+  = @requirement.part.name
 
 = link_to 'Edit', edit_requirement_path(@requirement)
 \|
 = link_to 'Back', requirements_path
+
+
+  
+  

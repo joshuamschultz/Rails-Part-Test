@@ -69,6 +69,6 @@ class RequirementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requirement_params
-      params.require(:requirement).permit(:bubble, :dim, :tolerance_less, :tolerance_plus, :dim_type, :part_id)
+      params.require(:requirement).permit(:bubble, :dim, :tolerance_less, :tolerance_plus, :characteristic_id, :part_id)
     end
 end

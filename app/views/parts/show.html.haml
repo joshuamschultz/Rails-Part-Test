@@ -2,7 +2,19 @@
 
 %p
   %b Name:
+  = @part.partnumber
+  
+%p
+  %b Name:
   = @part.name
+  
+%p
+  %b Name:
+  = @part.revision
+
+%p
+  %b Name:
+  = @part.customer
 
 = link_to 'Edit', edit_part_path(@part)
 \|
