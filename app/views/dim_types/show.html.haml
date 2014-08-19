@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @dim_type.name
+%p
+  %b Symbol:
+  = @dim_type.symbol
+%p
+  %b Two sided:
+  = @dim_type.two_sided
+%p
+  %b Continuous:
+  = @dim_type.continuous
+
+= link_to 'Edit', edit_dim_type_path(@dim_type)
+\|
+= link_to 'Back', dim_types_path

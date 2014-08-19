@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Bubble:
+  = @requirement.bubble
+%p
+  %b Dim:
+  = @requirement.dim
+%p
+  %b Tolerance less:
+  = @requirement.tolerance_less
+%p
+  %b Tolerance plus:
+  = @requirement.tolerance_plus
+%p
+  %b Dim type:
+  = @requirement.dim_type
+%p
+  %b Part:
+  = @requirement.part_id
+
+= link_to 'Edit', edit_requirement_path(@requirement)
+\|
+= link_to 'Back', requirements_path

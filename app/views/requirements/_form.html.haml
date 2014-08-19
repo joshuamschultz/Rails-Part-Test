@@ -1,0 +1,13 @@
+= simple_form_for(@requirement) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :bubble
+    = f.input :dim
+    = f.input :tolerance_less
+    = f.input :tolerance_plus
+    = f.input :dim_type
+    = f.input :part_id
+
+  .form-actions
+    = f.button :submit
