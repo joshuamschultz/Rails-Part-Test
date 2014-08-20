@@ -19,3 +19,18 @@
 = link_to 'Edit', edit_part_path(@part)
 \|
 = link_to 'Back', parts_path
+%br
+
+%requirementcontainer
+  -@part.requirements.each do |requirement|
+    = div_for(requirement, class: "requirement-box") do
+      .bubble= requirement.bubble
+      .characteristic= requirement.characteristic.name
+      .dimension= requirement.dim
+      .toleranceup
+        = precede "+ " do 
+          =requirement.tolerance_plus
+      .tolerancedn
+        = precede "- " do 
+          =requirement.tolerance_less
+
