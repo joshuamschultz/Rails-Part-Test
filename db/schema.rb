@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140819225512) do
+ActiveRecord::Schema.define(version: 20140820001613) do
 
   create_table "characteristics", force: true do |t|
     t.string   "name"
@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(version: 20140819225512) do
 
   create_table "requirements", force: true do |t|
     t.string   "bubble"
-    t.integer  "dim"
-    t.integer  "tolerance_less"
-    t.string   "tolerance_plus"
     t.integer  "part_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "characteristic_id"
+    t.float    "dim"
+    t.float    "tolerance_plus"
+    t.float    "tolerance_less"
   end
 
 end

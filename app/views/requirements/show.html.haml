@@ -23,6 +23,16 @@
 \|
 = link_to 'Back', requirements_path
 
+= div_for(@requirement, class: "requirement-box") do
+  .bubble= @requirement.bubble
+  .characteristic= @requirement.characteristic.name
+  .dimension= @requirement.dim
+  .toleranceup
+    +
+    = @requirement.tolerance_plus
+  .tolerancedn
+    = precede "- " do 
+      =@requirement.tolerance_less
 
   
   

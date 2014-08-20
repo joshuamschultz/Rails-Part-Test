@@ -1,3 +1,52 @@
 // Place all the styles related to the Requirements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.requirement-box {
+  width: 150px;
+  height: 175px;
+  float: left;
+  background: #EEEEEE;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: inset 0 0 10px #888;
+}
+
+.bubble {
+  color: darkred;
+  width: 100%;
+  padding: 2px;
+  margin-top: 3px;
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.characteristic {
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+  font-size: 125%;
+}
+
+.dimension {
+  width: 60%;
+  height: 60%;
+  padding: 2px;
+  margin-top: 20%;
+  float: left;
+  text-align: center;
+  font-size: 160%;
+  font-weight: bold;
+}
+
+.toleranceup {
+  padding: 5px;
+  margin-top: 10%;
+  font-size: 90%;
+}
+.tolerancedn {
+  padding: 5px;
+  margin-top: 10%;
+  font-size: 90%;
+}
