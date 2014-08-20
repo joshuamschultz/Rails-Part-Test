@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820001613) do
+ActiveRecord::Schema.define(version: 20140820162810) do
 
   create_table "characteristics", force: true do |t|
     t.string   "name"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20140820001613) do
     t.string   "symbol"
     t.boolean  "two_sided"
     t.boolean  "continuous"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "discussions", force: true do |t|
+    t.text     "body"
+    t.integer  "discussable_id"
+    t.string   "discussable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
