@@ -1,36 +1,38 @@
-%p#notice= notice
+.part-info
+  %p#notice= notice
 
-%p
-  %b Name:
-  = @part.partnumber
+  %p
+    %b Name:
+    = @part.partnumber
   
-%p
-  %b Name:
-  = @part.name
+  %p
+    %b Name:
+    = @part.name
   
-%p
-  %b Name:
-  = @part.revision
+  %p
+    %b Name:
+    = @part.revision
 
-%p
-  %b Name:
-  = @part.customer
+  %p
+    %b Name:
+    = @part.customer
 
-= link_to 'Edit', edit_part_path(@part)
-\|
-= link_to 'Back', parts_path
-%br
+  = link_to 'Edit', edit_part_path(@part)
+  \|
+  = link_to 'Back', parts_path
+  %br
 
-%requirementcontainer
-  -@part.requirements.each do |requirement|
-    = div_for(requirement, class: "requirement-box") do
-      .bubble= requirement.bubble
-      .characteristic= requirement.characteristic.name
-      .dimension= requirement.dim
-      .toleranceup
-        = precede "+ " do 
-          =requirement.tolerance_plus
-      .tolerancedn
-        = precede "- " do 
-          =requirement.tolerance_less
+  .requirement-container
+    -@part.requirements.each do |requirement|
+      = link_to requirement_path do
+        = div_for(requirement, class: "requirement-box") do
+          .bubble= requirement.bubble
+          .characteristic= requirement.characteristic.name
+          .dimension= requirement.dim
+          .toleranceup
+            = precede "+ " do 
+              =requirement.tolerance_plus
+          .tolerancedn
+            = precede "- " do 
+              =requirement.tolerance_less
 

@@ -18,21 +18,27 @@
 %p
   %b Part:
   = @requirement.part.name
+  
+#discussions
+  %b Discuss:
+  = render :file => 'discussions/index'
+  %br
+  = simple_form_for([@requirement, Discussion.new]) do |f|
+
+    .form-inputs
+      = f.input :body
+    
+    .form-actions
+      = f.button :submit
+  
+    
+  
 
 = link_to 'Edit', edit_requirement_path(@requirement)
 \|
-= link_to 'Back', requirements_path
+= link_to 'Back', :back
 
-= div_for(@requirement, class: "requirement-box") do
-  .bubble= @requirement.bubble
-  .characteristic= @requirement.characteristic.name
-  .dimension= @requirement.dim
-  .toleranceup
-    +
-    = @requirement.tolerance_plus
-  .tolerancedn
-    = precede "- " do 
-      =@requirement.tolerance_less
+
 
   
   

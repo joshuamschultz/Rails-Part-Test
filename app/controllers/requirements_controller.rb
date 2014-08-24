@@ -1,5 +1,6 @@
 class RequirementsController < ApplicationController
   before_action :set_requirement, only: [:show, :edit, :update, :destroy]
+  before_action :set_discussions
 
   # GET /requirements
   # GET /requirements.json
@@ -66,9 +67,14 @@ class RequirementsController < ApplicationController
     def set_requirement
       @requirement = Requirement.find(params[:id])
     end
+    
+    def set_discussions
+      @discussions = @requirement.discussions
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requirement_params
       params.require(:requirement).permit(:bubble, :dim, :tolerance_less, :tolerance_plus, :characteristic_id, :part_id)
+      
     end
 end
