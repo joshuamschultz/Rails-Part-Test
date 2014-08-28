@@ -68,6 +68,7 @@ gem 'haml-rails'
 gem 'simple_form'
 
 gem 'acts-as-taggable-on'
+gem 'carrierwave'
 
 gem 'nokogiri'
 
