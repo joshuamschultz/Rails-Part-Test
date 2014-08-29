@@ -1,4 +1,4 @@
-= simple_form_for(@part) do |f|
+= simple_form_for @part, :html => {:multipart => true } do |f|
   = f.error_notification
 
   .form-inputs
@@ -6,6 +6,7 @@
     = f.input :partnumber
     = f.input :revision
     = f.input :customer
+    = f.file_field :print
 
   .form-actions
     = f.button :submit
