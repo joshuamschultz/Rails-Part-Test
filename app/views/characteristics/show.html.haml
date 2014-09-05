@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @characteristic.name
+%p
+  %b Symbol:
+  = @characteristic.symbol
+%p
+  %b Two sided:
+  = @characteristic.two_sided
+%p
+  %b Continuous:
+  = @characteristic.continuous
+
+= link_to 'Edit', edit_characteristic_path(@characteristic)
+\|
+= link_to 'Back', characteristics_path
